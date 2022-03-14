@@ -6,6 +6,11 @@
   <style>
     img {
       border-radius: 50%;
+      cursor: pointer;
+      transition: border-radius .5s;
+    }
+    .changed {
+      border-radius: 0;
     }
     section {
       border-width: 1px;
@@ -23,10 +28,20 @@
 </head>
 <body>
   <section>
-    <img src="img/icon.png" alt="太郎のアイコン画像です">
+    <img src="img/icon.png" alt="太郎のアイコン画像です" id="trigger">
     <h1>駒井伸行</h1>
-    <p>SESで客先常駐中。勉強しています。</p>
+    <p id="target">SESで客先常駐中。勉強しています。</p>
   </section>
   <footer>(c) hope-lab.work</footer>
+  <script>
+    'use strict';
+
+    function process() {
+      document.getElementById('target').textContent = 'JS勉強中です！';
+      document.getElementById('trigger').classList.add('changed');
+    }
+
+    document.getElementById('trigger').addEventListener('click', process);
+  </script>
 </body>
 </html>
