@@ -60,7 +60,7 @@ let price2 = 150;
 console.log(price2 * 140);
 console.log(price2 * 160);
 
-price = 170;
+price2 = 170;
 console.log(price2 * 140);
 console.log(price2 * 160);
 
@@ -271,11 +271,11 @@ const total = sum(1, 2, 3) + sum(3, 4, 5); // 18
 //   return a + b + c;
 // }
 
-const sum = function(a, b, c) {
+const sum2 = function(a, b, c) {
   return a + b + c;
 };
 
-const total2 = sum(1, 2, 3) + sum(3, 4, 5);
+const total2 = sum2(1, 2, 3) + sum(3, 4, 5);
 console.log(total2);
 
 // #24 アロー関数を使ってみよう
